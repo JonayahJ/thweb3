@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Book Us{% endblock %}
+{% block description %}Schedule a free consultation with Think Halcyon by filling out the form on this page and selecting your availability.{% endblock %}
+
+{% block content %}
+
+{% comment %} Content goes here {% endcomment %}
+<main id="content" role="main">
+    <div class="container content-space-t-lg-3 content-space-b-3">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/thinkhalcyon/consultation?primary_color=fac359" style="min-width:320px;height:630px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+    </div>
+</main>
+
+{% endblock %}

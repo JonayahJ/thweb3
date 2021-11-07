@@ -1,0 +1,687 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block description %}Think Halcyon, LLC official website{% endblock %}
+
+{% block content %}
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero -->
+    <div class="d-lg-flex position-relative">
+      <div class="container d-lg-flex align-items-lg-center content-space-t-3 content-space-lg-0 min-vh-lg-100">
+        <!-- Heading -->
+        <div class="w-100">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="mb-5">
+                <h1 class="display-4 mb-3">
+                    A beautiful and functional design for your <br>
+
+                  <span class="text-primary text-highlight-warning">
+                    <span class="js-typedjs"
+                          data-hs-typed-options='{
+                            "strings": 
+                                [
+                                    "online store", 
+                                    "consultancy", 
+                                    "portfolio", 
+                                    "course", 
+                                    "blog", 
+                                    "brand", 
+                                    "clinic", 
+                                    "next big idea"
+                                ],
+                            "typeSpeed": 90,
+                            "loop": true,
+                            "backSpeed": 30,
+                            "backDelay": 2500
+                          }'></span>
+                  </span>
+                </h1>
+                
+                <p class="lead">Think Halcyon will handle your design needs while you focus on running your business.</p>
+              </div>
+
+              <div class="d-grid d-sm-flex gap-3">
+                <a class="btn btn-primary btn-transition px-6" href="{% url 'hire_us' %}">Get Started</a>  <!-- Hire Us -->
+                <a class="btn btn-link" href="{% url 'client_stories' %}">Client Stories <i class="bi-chevron-right small ms-1"></i></a> <!-- Customer stories template -->
+              </div>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Title & Description -->
+
+        <!-- Devices -->
+        <div class="devices-top-start-50 devices-rotated zi-2" style="width: 47rem;">
+            <div class="devices-wrap devices-rotated-body">
+              <!-- Tablet Device -->
+              <figure class="device-tablet" style="width: 27rem;">
+                <div class="device-tablet-frame">
+                  <img class="device-tablet-img" src="{% static 'website/assets/img/1618x1010/img1.png' %}" alt="Anahsa Educational Consultants homepage"> <!-- Anahsa on horizontal tablet -->
+                </div>
+              </figure>
+              <!-- End Tablet Device -->
+  
+              <!-- Vertical Tablet Device -->
+              <figure class="device-vertical-tablet" style="width: 18rem;">
+                <div class="device-vertical-tablet-frame">
+                  <img class="device-vertical-tablet-img" src="{% static 'website/assets/img/533x711/img2.png' %}" alt="Earthworks Acupuncture homepage"> <!-- EA on vertical tablet -->
+                </div>
+              </figure>
+              <!-- End Vertical Tablet Device -->
+  
+              <!-- Mobile Device -->
+              <figure class="device-mobile align-self-start" style="width: 10rem;">
+                <div class="device-mobile-frame">
+                  <img class="device-mobile-img" src="{% static 'website/assets/img/407x867/img7.png' %}" alt="Orgena Consulting "> <!-- Orgena Consulting on mobile device -->
+                </div>
+              </figure>
+              <!-- End Mobile Device -->
+  
+              <!-- Browser Device -->
+              <figure class="device-browser" style="width: 35rem;">
+                <div class="device-browser-header">
+                  <div class="device-browser-header-btn-list">
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                  </div>
+                  <div class="device-browser-header-browser-bar">www.thelanguageproject.co</div>
+                </div>
+                <div class="device-browser-frame">
+                  <img class="device-browser-img" src="{% static 'website/assets/img/1618x1010/img2.png' %}" alt="The Language Preservation Project resources section"> <!-- LPP on desktop -->
+                </div>
+              </figure>
+              <!-- End Browser Device -->
+            </div>
+          </div>
+          <!-- End Devices -->
+        </div>
+  
+        <!-- SVG Shape -->
+        <div class="col-lg-7 col-xl-6 d-none d-lg-block position-absolute top-0 end-0 pe-0" style="margin-top: 6.75rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1137.5 979.2">
+              <path fill="#F9FBFF" d="M565.5,957.4c81.1-7.4,155.5-49.3,202.4-115.7C840,739.8,857,570,510.7,348.3C-35.5-1.5-4.2,340.3,2.7,389
+                c0.7,4.7,1.2,9.5,1.7,14.2l29.3,321c14,154.2,150.6,267.8,304.9,253.8L565.5,957.4z"/>
+              <defs>
+                <path id="mainHeroSVG1" d="M1137.5,0H450.4l-278,279.7C22.4,430.6,24.3,675,176.8,823.5l0,0C316.9,960,537.7,968.7,688.2,843.6l449.3-373.4V0z"/>
+              </defs>
+              <clipPath id="mainHeroSVG2">
+                <use xlink:href="#mainHeroSVG1"/>
+              </clipPath>
+            </svg>
+          </div>
+          <!-- End SVG Shape -->
+    </div>
+    <!-- End Hero -->
+
+    <!-- Card Grid -->
+    <div class="container content-space-2 content-space-t-xl-1 content-space-b-lg-3">
+      <!-- Heading -->
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5">
+        <h2>Design has never been so simple</h2>
+      </div>
+      <!-- End Heading -->
+
+      <div class="text-center mb-10">
+        <!-- List Checked -->
+        <ul class="list-inline list-checked list-checked-primary">
+          <li class="list-inline-item list-checked-item">Custom designs</li>
+          <li class="list-inline-item list-checked-item">Collaborative process</li>
+          <li class="list-inline-item list-checked-item">Launch-ready</li>
+        </ul>
+        <!-- End List Checked -->
+      </div>
+
+      <div class="row mb-5 mb-md-0">
+        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card card-sm h-100">
+            <div class="p-2">
+              <img class="card-img" src="{% static 'website/assets/img/480x220/img1.jpeg' %}" alt="Black woman in library using laptop">
+            </div>
+
+            <div class="card-body">
+              <h4 class="card-title">Website Development</h4>
+              <p class="card-text">We will create a responsive, beautiful website that reflects you and your business.</p>
+
+              <!-- List Pointer -->
+              <ul class="list-pointer mb-0">
+                <li class="list-pointer-item">Mobile-Friendly</li>
+                <li class="list-pointer-item">Safe and Secure</li>
+                <li class="list-pointer-item">Aesthetically Pleasing</li>
+              </ul>
+              <!-- End List Pointer -->
+            </div>
+            <!-- web dev service page -->
+            <a class="card-footer card-link border-top" href="{% url 'website_development' %}">Learn more <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+          <!-- Card -->
+          <div class="card card-sm h-100">
+            <div class="p-2">
+              <img class="card-img" src="{% static 'website/assets/img/480x220/img2.jpeg' %}" alt="Black hands using laptop">
+            </div>
+
+            <div class="card-body">
+              <h4 class="card-title">Website Maintenance &amp; Hosting</h4>
+              <p class="card-text">We will update your website on a monthly basis and/or host your website on servers that we manage for you.</p>
+
+              <!-- List Pointer -->
+              <ul class="list-pointer mb-0">
+                <li class="list-pointer-item">Competitive hosting prices</li>
+                <li class="list-pointer-item">Timely updates</li>
+                <li class="list-pointer-item">Troubleshooting all bugs</li>
+              </ul>
+              <!-- End List Pointer -->
+            </div>
+            <!-- maintenance and hosting service page -->
+            <a class="card-footer card-link border-top" href="{% url 'maintenance_hosting' %}">Learn more <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-sm-6 col-lg-4">
+          <!-- Card -->
+          <div class="card card-sm h-100">
+            <div class="p-2">
+              <img class="card-img" src="{% static 'website/assets/img/480x220/img3.jpeg' %}" alt="People looking at a color palette">
+            </div>
+
+            <div class="card-body">
+              <h4 class="card-title">Branding</h4>
+              <p class="card-text">We will create your logos, graphics, and product designs. We will help you pick a color palette, fonts, and images that represent your business.</p>
+
+              <!-- List Pointer -->
+              <ul class="list-pointer mb-0">
+                <li class="list-pointer-item">All designs are custom</li>
+                <li class="list-pointer-item">Your input is king</li>
+                <li class="list-pointer-item">You own the finished product</li>
+              </ul>
+              <!-- End List Pointer -->
+            </div>
+            <!-- branding service page -->
+            <a class="card-footer card-link border-top" href="{% url 'branding' %}">Learn more <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Card Grid -->
+
+    <!-- Features -->
+    <div class="position-relative bg-light rounded-2 mx-3 mx-lg-10">
+      <div class="container content-space-2 content-space-lg-3">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5">
+          <h2>Nail your first impression every time</h2>
+          <p>Wow visitors with an easy to use, beautiful website from the first second</p>
+        </div>
+        <!-- End Heading -->
+
+        <div class="text-center mb-10">
+          <!-- List Checked -->
+          <ul class="list-inline list-checked list-checked-primary">
+            <li class="list-inline-item list-checked-item">Mobile-Friendly</li>
+            <li class="list-inline-item list-checked-item">5-star support</li>
+            <li class="list-inline-item list-checked-item">Intuitive Design</li>
+          </ul>
+          <!-- End List Checked -->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-7 mb-9 mb-lg-0">
+            <div class="pe-lg-6">
+              <!-- Browser Device -->
+              <figure class="device-browser">
+                <div class="device-browser-header">
+                  <div class="device-browser-header-btn-list">
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                    <span class="device-browser-header-btn-list-btn"></span>
+                  </div>
+                  <div class="device-browser-header-browser-bar">www.yegocoffee.com</div>
+                </div>
+
+                <div class="device-browser-frame">
+                  <img class="device-browser-img" src="{% static 'website/assets/img/1618x1010/img6.png' %}" alt="Image Description">
+                </div>
+              </figure>
+              <!-- End Browser Device -->
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div class="col-lg-5">
+            <!-- Heading -->
+            <div class="mb-4">
+              <h3>An intuitive design that streamlines user experience</h3>
+              <br>
+              <p>We help businesses showcase their services, products, and case studies so that their only concern is doing the actual work.  We use languages and frameworks like Django, Python, React, and JavaScript to create, update, and maintain a branded online presence.</p>
+            </div>
+            <!-- End Heading -->
+
+            <a class="btn btn-primary" href="#">Yego Coffee Client Story</a>
+
+            <hr class="my-5">
+
+            <span class="d-block">Trusted by companies across the country</span>
+
+            <div class="row">
+              <!-- Orgena Consulting -->
+              <div class="col py-3">
+                <img class="avatar avatar-4x3" src="{% static 'website/assets/svg/brands/fitbit-dark.svg' %}" alt="Logo">
+              </div>
+              <!-- End Col -->
+
+              <!-- The Language Preservation Project -->
+              <div class="col py-3">
+                <img class="avatar avatar-4x3" src="{% static 'website/assets/svg/brands/forbes-dark.svg' %}" alt="Logo">
+              </div>
+              <!-- End Col -->
+
+              <!-- Anahsa, LLC -->
+              <div class="col py-3">
+                <img class="avatar avatar-4x3" src="{% static 'website/assets/svg/brands/mailchimp-dark.svg' %}" alt="Logo">
+              </div>
+              <!-- End Col -->
+
+              <!-- EJH Futures -->
+              <div class="col py-3">
+                <img class="avatar avatar-4x3" src="{% static 'website/assets/svg/brands/layar-dark.svg' %}" alt="Logo">
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+    <!-- End Features -->
+
+    <!-- Features Nav -->
+    <div class="container content-space-2 content-space-lg-3">
+        <div class="row align-items-lg-center">
+          <div class="col-lg-5 mb-7 mb-lg-0">
+            <!-- Heading -->
+            <div class="mb-5">
+              <h2>Why Think Halcyon</h2>
+              <p>Our team of developers and designers leverage their experience with a multitude of frameworks and languages, design best practices, and experience integrating services like Shopify, MailChimp, and WordPress. Our aim is your success and overall happiness with the final product. We put many tools to task in that effort.</p>
+            </div>
+            <!-- End Heading -->
+  
+            <div class="row mb-4">
+              <div class="col-12">
+                <!-- List Checked -->
+                <ul class="list-checked list-checked-success mb-0">
+                  <li class="list-checked-item">Customized layout and styling</li>
+                  <li class="list-checked-item">Fully built-out features (blog, shop, events)</li>
+                  <li class="list-checked-item">Integrate with third-party services</li>                  
+                  <li class="list-checked-item">Secure admin area <span class="badge bg-primary rounded-pill ms-1">django apps</span></li>
+
+                </ul>
+                <!-- End List Checked -->
+              </div>
+              <!-- End Col -->
+  
+            </div>
+            <!-- End Row -->
+  
+            <a class="link" href="{% url 'scheduler' %}">Still curious? Schedule a consultation <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+          <!-- End Col -->
+  
+          <div class="col-lg-7">
+            <!-- Card -->
+            <div class="card bg-dark" style="min-height: 27rem;">
+              <div class="card-body">
+                <!-- Nav Scroller -->
+                <div class="js-nav-scroller hs-nav-scroller-horizontal hs-nav-scroller-light">
+                  <span class="hs-nav-scroller-arrow-prev" style="display: none;">
+                    <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                      <i class="bi-chevron-left"></i>
+                    </a>
+                  </span>
+  
+                  <span class="hs-nav-scroller-arrow-next" style="display: none;">
+                    <a class="hs-nav-scroller-arrow-link" href="javascript:;">
+                      <i class="bi-chevron-right"></i>
+                    </a>
+                  </span>
+                  
+                  <div class="text-center">
+                    <!-- Nav Pills -->
+                    <ul class="nav nav-sm nav-pills nav-light nav-justified mb-5" id="featuresCodingTab" role="tablist">
+                      <!-- Python -->
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link active" href="#featuresCodingOne" id="featuresCodingOne-tab" data-bs-toggle="tab" data-bs-target="#featuresCodingOne" role="tab" aria-controls="featuresCodingOne" aria-selected="true">Python</a>
+                      </li>
+                      
+                      <!-- JS -->
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#featuresCodingTwo" id="featuresCodingTwo-tab" data-bs-toggle="tab" data-bs-target="#featuresCodingTwo" role="tab" aria-controls="featuresCodingTwo" aria-selected="false">JavaScript</a>
+                      </li>
+  
+                      <!-- React -->
+                      <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="#featuresCodingThree" id="featuresCodingThree-tab" data-bs-toggle="tab" data-bs-target="#featuresCodingThree" role="tab" aria-controls="featuresCodingThree" aria-selected="false">React</a>
+                      </li>
+
+                    </ul>
+                    <!-- End Nav Pills -->
+                  </div>
+                </div>
+                <!-- End Nav Scroller -->
+  
+                <!-- Tab Content -->
+                <div class="tab-content" id="featuresCodingTabContent">
+                  <div class="tab-pane fade show active" id="featuresCodingOne" role="tabpanel" aria-labelledby="featuresCodingOne-tab">
+                    <!-- Code -->
+                    <div class="text-monospace">
+                      <div class="mb-4">
+                        <span class="text-danger pe-2">from </span>
+                        <span class="text-white">django.db</span> 
+                        <span class="text-danger pe-2">import</span>
+                        <span class="text-white">models</span> 
+                        <br><br>
+                        <span class="text-white-70">#Staff Member Model</span>
+                        <br>
+                        <span class="text-danger pe-2">class</span>
+                        <span class="text-success">Member</span>
+                        <span style="color: var(--bs-yellow)">(</span>
+                        <span class="text-success">models</span>
+                        <span class="text-white">.</span>
+                        <span class="text-success">Model</span>
+                        <span style="color: var(--bs-yellow)">)</span>
+                        <span class="text-white">:</span>
+                      </div>
+                      <div class="ps-3 mb-1">
+                        <span class="text-white pe-2">headshot</span>
+                        <span class="text-danger pe-2">=</span>
+                        <span class="text-white">models.</span>
+                        <span class="text-success">ImageField</span>
+                        <span style="color: var(--bs-yellow)">(upload_to</span>
+                        <span class="text-danger">=</span>
+                        <span class="text-info">'photos/headshots'</span>
+                        <span class="text-white">,</span>
+                      </div>
+                      <div class="ps-6 mb-1">
+                        <span style="color: var(--bs-yellow)"><em>null</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span class="text-white pe-2">,</span>
+                        <span style="color: var(--bs-yellow)"><em>blank</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span style="color: var(--bs-yellow)">)</span>
+                      </div>
+                      <div class="ps-3 mb-1">
+                        <span class="text-white pe-2">title</span>
+                        <span class="text-danger pe-2">=</span>
+                        <span class="text-white">models.</span>
+                        <span class="text-success">CharField</span>
+                        <span style="color: var(--bs-yellow)">(</span>
+                        <span style="color: var(--bs-yellow)"><em>max_length</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">100</span>
+                        <span style="color: var(--bs-yellow)">)</span>
+                      </div>
+                      <div class="ps-3 mb-1">
+                        <span class="text-white pe-2">name</span>
+                        <span class="text-danger pe-2">=</span>
+                        <span class="text-white">models.</span>
+                        <span class="text-success">CharField</span>
+                        <span style="color: var(--bs-yellow)">(</span>
+                        <span style="color: var(--bs-yellow)"><em>max_length</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">100</span>
+                        <span style="color: var(--bs-yellow)">)</span>
+                      </div>
+                      <div class="ps-3 mb-1">
+                        <span class="text-white pe-2">bio</span>
+                        <span class="text-danger pe-2">=</span>
+                        <span class="text-white">models.</span>
+                        <span class="text-success">TextField</span>
+                        <span style="color: var(--bs-yellow)">(</span>
+                        <span style="color: var(--bs-yellow)"><em>null</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span class="text-white pe-2">,</span>
+                        <span style="color: var(--bs-yellow)"><em>blank</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span style="color: var(--bs-yellow)">)</span>
+                      </div>
+                      <div class="ps-3 mb-1">
+                        <span class="text-white pe-2">linkedin</span>
+                        <span class="text-danger pe-2">=</span>
+                        <span class="text-white">models.</span>
+                        <span class="text-success">URLField</span>
+                        <span style="color: var(--bs-yellow)">(</span>
+                        <span style="color: var(--bs-yellow)"><em>null</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span class="text-white pe-2">,</span>
+                        <span style="color: var(--bs-yellow)"><em>blank</em></span>
+                        <span class="text-danger">=</span>
+                        <span style="color: #bdb2ff">True</span>
+                        <span style="color: var(--bs-yellow)">)</span>                      
+                      </div>
+                    </div>
+                    <!-- End Code -->
+                  </div>
+  
+                  <div class="tab-pane fade" id="featuresCodingTwo" role="tabpanel" aria-labelledby="featuresCodingTwo-tab">
+                    Coming soon...
+                  </div>
+  
+                  <div class="tab-pane fade" id="featuresCodingThree" role="tabpanel" aria-labelledby="featuresCodingThree-tab">
+                    Coming soon...
+                  </div>
+
+                </div>
+                <!-- End Tab Content -->
+              </div>
+            </div>
+            <!-- End Card -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Features Nav -->
+
+    <!-- Testimonials -->
+    <div class="container content-space-3 content-space-t-lg-1">
+        <!-- Heading -->
+        <div class="w-lg-75 w-lg-50 text-center mx-md-auto mb-5 content-space-b-1">
+          <span class="text-cap" style="color: #fac359">Testimonials</span>
+          <h2>Think Halcyon is loved by clients nationwide</h2>
+        </div>
+        <!-- End Heading -->
+  
+        <div class="row">
+          <!-- For loop -->
+          {% for testimonial in object_list %}
+            <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">
+              <!-- Card -->
+              <div class="card h-100">
+                <div class="card-body">
+                  <!-- Rating -->
+                  <div class="d-flex gap-1 mb-2">
+                    <img src="{% static 'website/assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16">
+                    <img src="{% static 'website/assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16">
+                    <img src="{% static 'website/assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16">
+                    <img src="{% static 'website/assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16">
+                    <img src="{% static 'website/assets/svg/illustrations/star.svg' %}" alt="Review rating" width="16">
+                  </div>
+                  <!-- End Rating -->
+    
+                  <div class="mb-auto">
+                    <p class="card-text">{{ testimonial.quote }}</p>
+                  </div>
+                </div>
+    
+                <div class="card-footer pt-0">
+                  <!-- Media -->
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                      <img class="avatar avatar-circle" src="{{ testimonial.headshot.url }}" alt="{{ testimonial.name}}'s headshot">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <h5 class="card-title mb-0">{{ testimonial.name }}</h5>
+                      <p class="card-text small">{{ testimonial.title }}</p>
+                    </div>
+                  </div>
+                  <!-- End Media -->
+                </div>
+              </div>
+              <!-- End Card -->
+            </div> <!-- End Col -->
+          {% endfor %} 
+        </div>
+        <!-- End Row -->
+      </div>
+      <!-- End Testimonials -->
+
+    <!-- Blog -->
+    <div class="bg-light rounded-2 mx-3 mx-lg-10">
+      <div class="container content-space-2">
+
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 content-space-b-1">
+            <span class="text-cap" style="color: #fac359">Resources</span>
+            <h2>Where to start with a new website</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="overflow-hidden">
+            <div class="row gx-lg-7">
+            <div class="col-sm-6 col-lg-4 mb-5">
+                <!-- Card -->
+                <a class="card card-flush h-100" href="./blog/post/lets-talk-about-domains" data-aos="fade-up">
+                <img class="card-img" src="{% static 'website/assets/img/480x320/img1.png' %}" alt="Yellow Desktop and Website URL field">
+                <div class="card-body" style="padding-left: 5%; padding-right: 5%;">
+                    <span class="card-subtitle text-body">Read the blog</span>
+                    <h4 class="card-title text-inherit">Let's Talk About Domains</h4>
+                    <p class="card-text text-body">Securing a custom domain is a necessary first step for any new website. Here's what to know before you buy one.</p>
+                </div>
+                </a>
+                <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col-sm-6 col-lg-4 mb-5">
+                <!-- Card -->
+                <a class="card card-flush h-100" href="#" data-aos="fade-up" data-aos-delay="150">
+                <img class="card-img" src="{% static 'website/assets/img/480x320/img34.jpg' %}" alt="Image Description">
+                <div class="card-body" style="padding-left: 5%; padding-right: 5%;">
+                    <span class="card-subtitle text-body">Download the guide</span>
+                    <h4 class="card-title text-inherit">The Website Checklist</h4>
+                    <p class="card-text text-body">When people see the amount of content needed to create a website, overwhelm sets in. This checklist will show you that it is possible and doable.</p>
+                </div>
+                </a>
+                <!-- End Card -->
+            </div>
+            <!-- End Col -->
+
+            <div class="col-sm-6 col-lg-4 mb-5">
+                <!-- Card -->
+                <a class="card card-flush h-100" href="./blog/post/branding-101-from-palettes-to-graphics" data-aos="fade-up" data-aos-delay="200">
+                <img class="card-img" src="{% static 'website/assets/img/480x320/img2.png' %}" alt="Product mockup">
+                <div class="card-body" style="padding-left: 5%; padding-right: 5%;">
+                    <span class="card-subtitle text-body">Read the blog</span>
+                    <h4 class="card-title text-inherit">Branding 101: From Palettes to Graphics</h4>
+                    <p class="card-text text-body">Websites need a consistent theme and graphics to look good. Here's what to know to get started.</p>
+                </div>
+                </a>
+                <!-- End Card -->
+            </div>
+            <!-- End Col -->
+            </div>
+            <!-- End Row -->
+        </div>
+
+        <!-- Card Info -->
+        <div class="text-center">
+            <div class="card card-info-link card-sm">
+            <div class="card-body">
+                Want to read more? <a class="card-link ms-2" href="{% url 'blog' %}">Go here <span class="bi-chevron-right small ms-1"></span></a>
+            </div>
+            </div>
+        </div>
+        <!-- End Card Info -->
+        </div>
+        <!-- End Card Grid -->
+    </div>
+    <!-- End Blog -->
+
+    <div class="content-space-t-lg-3"></div>
+
+    {% comment %} {% block mailchimp %}{% endblock mailchimp %} {% endcomment %}
+
+    {% comment %} <!-- Mailchimp Subscribe ====================================================================== COMPLETELY REFACTOR AND USE MC/DJANGO API -->
+    <div class="container content-space-2 content-space-t-lg-3 content-space-b-lg-4">
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+          <div class="row justify-content-lg-between">
+            <!-- Heading -->
+            <div class="mb-5">
+              <span class="text-cap">Subscribe</span>
+              <h2>Stay updated with our latest articles</h2>
+            </div>
+            <!-- End Heading -->
+  
+            <form method="POST" action="{% url 'subscription' %}">
+              {% csrf_token %}
+              <!-- Input Card -->
+              <div class="input-card input-card-sm border mb-3">
+                <div class="input-card-form">
+                  <label 
+                    for="subscribeForm" 
+                    class="form-label visually-hidden"
+                  >Enter email</label>
+                  <input 
+                    type="email" 
+                    name="email" 
+                    id="subscribeForm" 
+                    class="form-control form-control-lg" 
+                    placeholder="Enter email" 
+                    aria-label="Enter email"
+                  >
+                </div>
+                <button type="button" class="btn btn-primary btn-lg">Subscribe</button>
+              </div>
+              <!-- End Input Card -->
+            </form>
+  
+            <p>We won't spam your inbox.</p> <!-- Spam Message -->
+
+            <!-- Message if email address is sent -->
+            {% if messages %}
+              {% for message in messages %}
+                <div class="my-5 alert alert-success">
+                  <h5 class="m-0">{{ message }}</h5>
+                </div>
+              {% endfor %}
+            {% endif %}
+
+          </div>
+        </div>
+    </div>
+    <!-- End Subscribe --> {% endcomment %}
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}

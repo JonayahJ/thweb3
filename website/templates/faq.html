@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}FAQ{% endblock %}
+{% block description %}Have questions? Check out the Think Halcyon FAQ page for answers.{% endblock %}
+
+{% block content %}
+
+{% comment %} Content goes here {% endcomment %}
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero -->
+    <div class="bg-img-start" style="background-image: url({% static 'website/assets/svg/components/card-11.svg' %});">
+      <div class="container content-space-t-3 content-space-t-lg-5 content-space-b-2">
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+          <h1>FAQ</h1>
+          <p>Search our FAQ for answers to anything you might ask.</p>
+        </div>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- FAQ -->
+    <div class="container content-space-2 content-space-b-lg-3">
+        <div class="w-lg-75 mx-lg-auto">
+            <div class="d-grid gap-10">
+                <div class="d-grid gap-3">
+                    <h2>General</h2>
+
+                    <!-- Accordion -->
+                    <div class="accordion accordion-flush accordion-lg" id="accordionFAQBasics">
+                        <!-- Accordion Item -->
+                        <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsOne">
+                            <a class="accordion-button" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsOne" aria-expanded="true" aria-controls="collapseBasicsOne">
+                                What does Think Halcyon mean?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsOne" class="accordion-collapse collapse show" aria-labelledby="headingBasicsOne" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                The word halcyon means "reign of peace." My clients often come to me after they've tried to setup a website on their own with no luck. They're frustrated and need help. I want to support my clients as they return to a calmer and more peaceful outlook on running their business. I want them to think about peaceful and prosperous times while I handle the hard stuff.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsTwo">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsTwo" aria-expanded="false" aria-controls="collapseBasicsTwo">
+                                Which kinds of websites do you create?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsTwo" class="accordion-collapse collapse" aria-labelledby="headingBasicsTwo" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                Think Halcyon specializes in custom-developed websites and self-hosting.  However, we have worked on a myriad of different websites using services like WordPress, Ghost, Shopify, and Squarespace.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                    
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsThree">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsThree" aria-expanded="false" aria-controls="collapseBasicsThree">
+                                Just curious. What is your tech stack?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsThree" class="accordion-collapse collapse" aria-labelledby="headingBasicsThree" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                Our primary tech stack is the MERN stack (MySQL, Express, React, Node).  However, we also utilize other technologies, languages, and SQL dialects/databases to develop our websites, such as PostgreSQL, SQLite, Django, Python, JavaScript, SCSS, Bootstrap, Material-UI, and much more.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                        
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsFour">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFour" aria-expanded="false" aria-controls="collapseBasicsFour">
+                                What type of content do I need to make a website?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsFour" class="accordion-collapse collapse" aria-labelledby="headingBasicsFour" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                Great question!  Building a website requires a lot of content, like all of your copyedited text, external links, images (photos and graphics), audio/visual files, and more.  If you want to know more about what you need before you make a website, download our free <a href="#" target+"_blank">Website Checklist PDF</a> to help you plan your next project.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                   
+                
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsFive">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsFive" aria-expanded="false" aria-controls="collapseBasicsFive">
+                                What should I do if I don't have good photos?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsFive" class="accordion-collapse collapse" aria-labelledby="headingBasicsFive" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                Not everyone has the time or money to hire a professional photographer to take photos of them or their businesses. If that's the case, we can use high-quality, free stock images from websites like <a href="https://www.unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a> or <a href="https://www.pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a> until you can get photos of your own.  Please note: It is always better to use your own photos.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingBasicsSix">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseBasicsSix" aria-expanded="false" aria-controls="collapseBasicsSix">
+                            Can I hire you to maintain my website for me if you didn’t create it?
+                            </a>
+                        </div>
+                        <div id="collapseBasicsSix" class="accordion-collapse collapse" aria-labelledby="headingBasicsSix" data-bs-parent="#accordionFAQBasics">
+                            <div class="accordion-body">
+                                Of course!  That’s not a problem.  Think Halcyon often maintains websites for our clients, regardless of whether or not we developed or designed the site.  As long as you give us admin access to your site, we can manage it for you.  For more details, check out our <a href="{% url 'maintenance_hosting' %}">Website Maintenance and Hosting</a> service page.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+           
+                </div>
+
+            </div>
+            <!-- End Accordion --> 
+
+            <div class="d-grid gap-3">
+                <h2>Billing</h2>
+
+                <!-- Accordion -->
+                <div class="accordion accordion-flush accordion-lg" id="accordionFAQPayments">
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingPaymentsOne">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePaymentsOne" aria-expanded="false" aria-controls="collapsePaymentsOne">
+                                Which kinds of payments do you accept?
+                            </a>
+                        </div>
+                        <div id="collapsePaymentsOne" class="accordion-collapse collapse" aria-labelledby="headingPaymentsOne" data-bs-parent="#accordionFAQPayments">
+                            <div class="accordion-body">
+                                We accept all major credit and debit cards, Google Pay, and Apple Pay via Stripe.  However, I do not accept checks or money orders.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingPaymentsTwo">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePaymentsTwo" aria-expanded="false" aria-controls="collapsePaymentsTwo">
+                                How do I get a receipt for my purchase?
+                            </a>
+                        </div>
+                        <div id="collapsePaymentsTwo" class="accordion-collapse collapse" aria-labelledby="headingPaymentsTwo" data-bs-parent="#accordionFAQPayments">
+                            <div class="accordion-body">
+                                You will receive an invoice or receipt from Think Halcyon after the successful payment via Stripe.  All receipts and invoices are itemized.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                    
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingPaymentsThree">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePaymentsThree" aria-expanded="false" aria-controls="collapsePaymentsThree">
+                                Do you have standard rates for website development?
+                            </a>
+                        </div>
+                        <div id="collapsePaymentsThree" class="accordion-collapse collapse" aria-labelledby="headingPaymentsThree" data-bs-parent="#accordionFAQPayments">
+                            <div class="accordion-body">
+                                No.  Each website, each project, is unique.  As such, Think Halcyon provides quotes for all of our projects after we have had an initial consultation about the proposed work.  Our branding service operates the same way.  On the other hand, website maintenance and hosting do have standard rates based on a tiered system.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                    
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingPaymentsFour">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePaymentsFour" aria-expanded="false" aria-controls="collapsePaymentsFour">
+                                What is your cancellation policy?
+                            </a>
+                        </div>
+                        <div id="collapsePaymentsFour" class="accordion-collapse collapse" aria-labelledby="headingPaymentsFour" data-bs-parent="#accordionFAQPayments">
+                            <div class="accordion-body">
+                                If, for any reason, you need to cancel a project that has already begun, we require a 7-day written notice for website development or branding.  Cancelling a subscription service, such as website maintenance or hosting, is immediate.  However, when you cancel your plan, the last fee is prorated.  Please note: you will still have access to those cancelled services until your plan runs out.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+
+                    <!-- Accordion Item -->
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="headingPaymentsFive">
+                            <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapsePaymentsFive" aria-expanded="false" aria-controls="collapsePaymentsFive">
+                                Do you offer refunds?
+                            </a>
+                        </div>
+                        <div id="collapsePaymentsFive" class="accordion-collapse collapse" aria-labelledby="headingPaymentsFive" data-bs-parent="#accordionFAQPayments">
+                            <div class="accordion-body">
+                                Unfortunately, we are unable to provide refunds for work completed or hours spent working on your projects.  Thank you for understanding.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Accordion Item -->
+                </div>
+                <!-- End Accordion -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End FAQ -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}

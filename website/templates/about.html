@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+{% block description %}Think Halcyon was founded in 2019 by Jonayah M. Jackson.{% endblock %}
+
+{% block content %}
+
+{% comment %} Content goes here {% endcomment %}
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Gallery -->
+    <div class="container content-space-t-3 content-space-t-lg-5">
+      <div class="w-lg-75 text-center mx-lg-auto">
+        <!-- Heading -->
+        <div class="mb-5 mb-md-10">
+          <h1 class="display-4">About Us</h1>
+          <p class="lead">Think Halcyon, LLC is a website development and branding company that focuses on building beautiful, yet functional websites.  Businesses from all over the country choose Think Halcyon to help them realize their design needs.</p>
+        </div>
+        <!-- End Heading -->
+      </div>
+
+      <div class="row gx-3">
+        <div class="col mb-3">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img3.png' %}); height: 15rem;" alt="Black woman using laptop"></div>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-3 d-none d-md-block mb-3">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img5.png' %}); height: 15rem;" alt="woman video conferencing"></div>
+        </div>
+        <!-- End Col -->
+        
+        <div class="col mb-3">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img4.png' %}); height: 15rem;" alt="two women talking over a laptop"></div>
+        </div>
+        <!-- End Col -->
+
+        <div class="w-100"></div>
+
+        <div class="col mb-3 mb-md-0">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img6.png' %}); height: 15rem;" alt="three black women using a laptop"></div>
+        </div>
+        <!-- End Col -->
+        
+        <div class="col-4 d-none d-md-block mb-3 mb-md-0">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img9.png' %}); height: 15rem;" alt="black man using laptop"></div>
+        </div>
+        <!-- End Col -->
+        
+        <div class="col">
+          <div class="bg-img-start" style="background-image: url({% static 'website/assets/img/480x320/img7.png' %}); height: 15rem;" alt="cafe workers using a laptop"></div>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End Gallery -->
+
+    <!-- Horizontal Line -->
+    <div class="border-top mx-auto" style="max-width: 25rem;"></div>
+
+    <!-- About Text -->
+    <div class="container content-space-2 content-space-lg-3">
+      <div class="row justify-content-lg-between">
+        <div class="col-lg-4 mb-5 mb-lg-0">
+          <h2>Creating responsive and intuitive designs for every kind of business</h2>
+        </div>
+        <!-- End Col -->
+
+        <div class="col-lg-6">
+          <p>Since its founding in 2019 by Jonayah Marie Jackson, Think Halcyon has helped over 10 companies across the United States launch websites from different industries.  From retail to coaching to professional academic websites, we believe that the best first impression is a great website with a unique brand identity.</p>
+          <p>Creating a website or a brand is complex, time-consuming, and sometimes quite technical.  Not everyone has the time to learn a new coding language or how to color correct photos.  That’s where Think Halcyon steps in--to help business owners with their design needs.  As such, Think Halcyon specializes in website development with an eye for aesthetics and function. Leveraging their knowledge of and expertise in graphic design, website development, hosting services, and debugging, Think Halcyon aims to be your one-stop-shop for creating and maintaining stunning websites.</p>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+    </div>
+    <!-- End About Text -->
+
+    <!-- Staff Members -->
+    <div class="container content-space-b-lg-3">
+        <!-- Heading -->
+        <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+        <span class="text-cap">Our team</span>
+        <h2>Devs, Creatives, and Operations</h2>
+        </div>
+        <!-- End Heading -->
+
+        <div class="row gx-3 mb-5"> <!-- start row -->
+            
+            {% for member in object_list %}
+
+                <div class="col-sm-6 col-lg-4 mb-4"> <!-- start col -->
+
+                    <!-- Card -->
+                    <div class="card card-transition h-100">
+                        <div class="card-body">
+                            <div class="avatar avatar-lg avatar-circle mb-4">
+                                <img class="avatar-img" src="{{ member.headshot.url }}" alt="{{ member.first_name }} {{ member.last_name }}'s headshot"> <!-- headshot -->
+                            </div>
+
+                            <span class="card-subtitle">{{ member.title }}</span> <!-- title -->
+                            <h4 class="card-title">{{ member.first_name }} {{ member.middle_initial }}. {{ member.last_name }}</h4> <!-- member full name -->
+                            <p class="card-text">{{member.bio}}</p> <!-- bio -->
+                        </div>
+
+                        <div class="card-footer pt-0">
+                            <!-- Socials -->
+                            <ul class="list-inline mb-0">
+                                {% if member.linkedin %}
+                                  <!-- LinkedIn Link -->
+                                  <li class="list-inline-item">
+                                    <a class="btn btn-outline-primary btn-xs btn-icon rounded" href="{{ member.linkedin }}" target="_blank"> <!-- LinkedIn -->
+                                        <i class="bi-linkedin"></i>
+                                    </a>
+                                  </li>
+                                {% endif %}
+
+                                {% if member.github %}
+                                  <!-- GitHub Link -->
+                                  <li class="list-inline-item">
+                                    <a class="btn btn-outline-primary btn-xs btn-icon rounded" href="{{member.github}}" target="_blank"> <!-- GitHub -->
+                                        <i class="bi-github"></i>
+                                    </a>
+                                  </li>
+                                {% endif %}
+                            </ul>
+                            <!-- End Socials -->
+                        </div>
+                    
+                    </div>
+                    <!-- End Card -->
+
+                </div>
+                <!-- End Col -->
+
+            {% endfor %}
+        
+        </div>
+        <!-- End Col -->
+
+      </div>
+      <!-- End Row -->
+
+    </div> <!-- End Staff Members -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}

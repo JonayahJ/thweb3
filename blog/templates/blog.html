@@ -1,0 +1,226 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog{% endblock %}
+{% block description %}Read the Think Halcyon blog and keep up to date with out articles.{% endblock %}
+
+{% block content %}
+
+{% comment %} Content goes here {% endcomment %}
+<!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero -->
+    <div class="container content-space-t-3 content-space-t-lg-5 content-space-b-1 content-space-b-md-2">
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto">
+        <h1 class="display-4">Articles</h1>
+        <p class="lead">Latest posts, updates, and resources</p>
+      </div>
+    </div>
+    <!-- End Hero -->
+
+    <!-- Card Grid -->
+    <div class="container content-space-b-2 content-space-b-lg-3">
+      <div class="row justify-content-md-between align-items-md-center mb-7">
+        <div class="col-md-5 mb-5 mb-md-0">
+          
+          <!-- Categories -->
+          <div class="d-md-flex align-items-md-center text-center text-md-start">
+            <span class="d-block me-md-3 mb-2 mb-md-1">Categories:</span>
+            <a class="btn btn-soft-secondary btn-xs rounded-pill m-1" href="javascript:;">Business</a>
+            <a class="btn btn-soft-secondary btn-xs rounded-pill m-1" href="javascript:;">Health</a>
+            <a class="btn btn-soft-secondary btn-xs rounded-pill m-1" href="javascript:;">Environment</a>
+            <a class="btn btn-soft-secondary btn-xs rounded-pill m-1" href="javascript:;">Adventure</a>
+          </div>
+          <!-- End Tags -->
+        </div>
+        <!-- End Col -->
+
+        <div class="col-md-5 col-lg-4">
+          <form>
+            <!-- Search box -->
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search articles" aria-label="Search articles">
+              <button type="button" class="btn btn-primary"><i class="bi-search"></i></button>
+            </div>
+            <!-- End Search box -->
+          </form>
+        </div>
+        <!-- End Col -->
+      </div>
+      <!-- End Row -->
+
+      {% comment %} ============================= FEATURED FOR LOOP ============================= {% endcomment %}
+      {% for post in object_list %}
+        {% if post.featured %}
+          <!-- Featured Card -->
+          <div class="card card-stretched-vertical mb-10">
+            <div class="row gx-0">
+              <div class="col-lg-8">
+                <div class="shape-container overflow-hidden">
+                  <img class="card-img" src="{{ post.featuredImage.url }}" alt="{{ post.featDesc }}"> <!-- featured image and alt desc -->
+                  
+                  <!-- Shape -->
+                  <div class="shape shape-end d-none d-lg-block zi-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100.1 1920" height="101%">
+                      <path fill="#fff" d="M0,1920c0,0,93.4-934.4,0-1920h100.1v1920H0z"/>
+                    </svg>
+                  </div>
+                  <!-- End Shape -->
+                  
+                  <!-- Shape -->
+                  <div class="shape shape-bottom d-lg-none zi-1" style="margin-bottom: -.25rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                      <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+                    </svg>
+                  </div>
+                  <!-- End Shape -->
+                </div>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-lg-4">
+                <!-- Card Body -->
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <a class="text-dark" href="{{ post.get_absolute_url }}">{{ post.title }}</a> <!-- url and title -->
+                  </h3>
+
+                  <p class="card-text">{{ post.excerpt }}</p> <!-- excerpt -->
+
+                  <!-- Card Footer -->
+                  <div class="card-footer">
+                    <div class="d-flex align-items-center">
+                      <div class="flex-shrink-0 avatar-group avatar-group-xs">
+                        {% if post.author|length <= 1 %} <!-- authors -->
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                            <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                          </a>
+                        {% else %}  
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                            <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                          </a>
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author2 }}">
+                            <img class="avatar-img" src="{{ post.author2HS.url }}" alt="{{ post.author2 }}'s headshot">
+                          </a>
+                        {% endif %}
+                      </div>
+
+                      <div class="flex-grow-1">
+                        <div class="d-flex justify-content-end">
+                          <p class="card-text">{{ post.post_date }}</p> <!-- date -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Card Footer -->
+                </div>
+                <!-- End Card Body -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+          <!-- End Featured Card -->
+        {% endif %}
+      {% endfor %}
+      {% comment %} ============================= END FEATURED FOR LOOP ============================= {% endcomment %}
+
+
+      <div class="row mb-7">
+        {% comment %} ============================= BLOG POST FOR LOOP ============================= {% endcomment %}
+        {% for post in object_list %}
+          {% if post.featured == False %}
+            <div class="col-sm-6 col-lg-4 mb-4">
+              <!-- Regular Card -->
+              <div class="card h-100">
+                <div class="shape-container">
+                  
+                  <!-- Featured Image -->
+                  <img class="card-img-top" src="{{ post.cardTop.url }}" alt="{{ post.altDesc1 }}"> <!-- image and alt -->
+                  
+                  <!-- Shape -->
+                  <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                      <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+                    </svg>
+                  </div>
+                  <!-- End Shape -->
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+                  <h3 class="card-title">
+                    <a class="text-dark" href="{{ post.get_absolute_url }}">{{ post.title }}</a> <!-- url and title -->
+                  </h3>
+
+                  <p class="card-text">{{ post.excerpt }}</p> <!-- excerpt -->
+                </div>
+                <!-- End Card Body -->
+
+                <!-- Card Footer -->
+                <div class="card-footer">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0 avatar-group avatar-group-xs">
+                    <!-- authors -->
+                      {% if post.author|length <= 1 %} <!-- authors -->
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                            <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                          </a>
+                        {% else %}  
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                            <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                          </a>
+                          <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author2 }}">
+                            <img class="avatar-img" src="{{ post.author2HS.url }}" alt="{{ post.author2 }}'s headshot">
+                          </a>
+                        {% endif %}
+                    </div>
+
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-end">
+                        <p class="card-text">{{ post.post_date }}</p> <!-- date -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Card Footer -->
+              </div>
+              <!-- End Card -->
+            </div><!-- End Col -->
+          {% endif %}
+        {% endfor %}
+        
+      </div>
+      <!-- End Row -->
+
+      <!-- Pagination -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-end">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-left small"></i>
+              </span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-right small"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- End Pagination -->
+    </div>
+    <!-- End Card Grid -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}

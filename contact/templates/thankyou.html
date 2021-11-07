@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block description %}Think Halcyon, LLC official website{% endblock %}
+
+{% block content %}
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+
+    <!-- Content -->
+    <div class="d-sm-flex">
+      <div class="container d-sm-flex align-items-sm-center vh-sm-100 content-space-t-3 content-space-b-1 content-space-b-sm-3 content-space-sm-0">
+        <div class="row justify-content-sm-between align-items-sm-center flex-grow-1">
+          <div class="col-9 col-sm-5 mb-5 mb-sm-0">
+            <img class="img-fluid" src="{% static 'website/assets/img/illustrations/hi-five.png' %}" alt="High Five">
+          </div>
+          <!-- End Col -->
+
+          <div class="col-sm-6">
+            <!-- Heading -->
+            <div class="mb-2">
+              <h1>Thank you for reaching out!</h1>
+              <p>We appreciate you taking the time to reach out to us. Once we receive your email, we'll be in touch shortly.</p>
+            </div>
+            <!-- End Heading -->
+
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Row -->
+      </div>
+    </div>
+    <!-- End Content -->
+
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}
