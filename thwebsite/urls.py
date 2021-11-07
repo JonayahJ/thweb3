@@ -9,5 +9,6 @@ urlpatterns = [
     path('', include('website.urls')),
     path('blog/', include('blog.urls')),
     path('contact/', include('contact.urls')),
+    path('client-stories/', include('stories.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # allows us to grab images uploaded from admin side

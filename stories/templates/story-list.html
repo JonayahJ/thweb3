@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Client Stories{% endblock %}
+{% block description %}Learn about previous Think Halcyon projects and our clients who contracted them.{% endblock %}
+
+{% block content %}
+
+<!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- Hero -->
+    <div class="position-relative bg-img-start" style="background-image: url({% static 'website/assets/img/1920x1080/img32.png' %});" alt="business woman on phone and desktop">
+      
+      <!-- Make this disappear on mobile -->
+      <div class="container content-space-t-2 content-space-t-md-3 content-space-3 content-space-b-lg-5">
+        <div class="w-lg-50 content-space-b-lg-5">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+
+      <!-- Shape -->
+      <div class="shape shape-bottom zi-1" style="margin-bottom: -.125rem">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+          <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+        </svg>
+      </div>
+      <!-- End Shape -->
+    </div>
+    <!-- End Hero -->
+
+    <!-- Clients -->
+    <div class="container position-relative zi-2">
+      <div class="row justify-content-center mt-n5">
+        <div class="col-3 col-lg-2 d-none d-sm-inline-block mt-n10">
+          <!-- Logo -->
+          <div class="avatar avatar-xl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/orgena.png' %}" alt="Orgena Consulting logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+
+        <div class="col-lg-2 d-none d-lg-inline-block mt-lg-n8">
+          <!-- Logo -->
+          <div class="avatar avatar-xxl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/anahsa.png' %}" alt="Anahsa Educational Consultants logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+
+        <div class="col-3 col-lg-2 d-none d-sm-inline-block mt-n4">
+          <!-- Logo -->
+          <div class="avatar avatar-xl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/lpp.png' %}" alt="The Language Preservation Project logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+
+        <div class="col-3 col-lg-2 d-none d-sm-inline-block mt-n7">
+          <!-- Logo -->
+          <div class="avatar avatar-xl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/yegocoffee.png' %}" alt="Yego Coffee logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+
+        <div class="col-lg-2 d-none d-lg-inline-block mt-lg-n10">
+          <!-- Logo -->
+          <div class="avatar avatar-xxl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/EJHF.png' %}" alt="EJH Futures, LLC logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+
+        <div class="col-3 col-lg-2 d-none d-sm-inline-block">
+          <!-- Logo -->
+          <div class="avatar avatar-xl avatar-circle shadow-sm p-4 mx-auto">
+            <img class="avatar-img" src="{% static 'website/assets/img/logos/che_favicon.png' %}" alt="Elliott Educational Services logo">
+          </div>
+          <!-- End Logo -->
+        </div>
+      </div>
+    </div>
+    <!-- End Clients -->
+
+    <!-- Card Grid -->
+    <div class="container content-space-2 content-space-lg-3">
+      <!-- Heading -->
+      <div class="w-md-75 w-lg-50 text-center mx-md-auto mb-5 mb-md-9">
+        <span class="text-cap">Clients Stories</span>
+        <h2>See how Think Halcyon is helping small businesses make great first impressions</h2>
+      </div>
+      <!-- End Heading -->
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-5">
+
+        <!-- ==================================================== For loop here ============================================================= -->
+        <div class="col mb-5">
+          <!-- Card -->
+          <div class="card h-100">
+            <img class="card-img-top" src="{% static 'website/assets/img/480x320/img13.jpg' %}" alt="Image Description">
+            
+            <div class="card-body">
+              <div class="mb-3">
+                <img class="avatar avatar-lg avatar-4x3" src="{% static 'website/assets/svg/brands/amazon.svg' %}" alt="Logo">
+              </div>
+              <p class="card-text">Amazon launched their enterprise platform and built a powerful user experience.</p>
+            </div>
+            
+            <div class="card-footer pt-0">
+              <a class="card-link" href="./page-customer-story.html">Read story <i class="bi-chevron-right small ms-1"></i></a>
+            </div>
+          </div>
+          <!-- End Card -->
+        </div>
+        <!-- End Col -->
+        <!-- ==================================================== Endfor loop here ============================================================= -->
+
+      </div>
+      <!-- End Row -->
+
+      <!-- 
+      
+      View all button 
+      <div class="text-center">
+        <a class="btn btn-outline-primary" href="#">View all stories</a>
+      </div>
+      
+      -->
+    
+    </div>
+    <!-- End Card Grid -->
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}

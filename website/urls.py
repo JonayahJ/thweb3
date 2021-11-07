@@ -8,7 +8,6 @@ urlpatterns = [
     # path('', views.subscription, name="subscription"),
     path('about.html', AboutView.as_view(), name="about"),
     path('branding.html', views.branding, name="branding"),
-    path('client-stories.html', views.client_stories, name="client_stories"),
     path('contact.html', views.contact, name="contact"),
     path('faq.html', views.faq, name="faq"),
     path('hire-us.html', views.hire_us, name="hire_us"),
