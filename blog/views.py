@@ -22,8 +22,4 @@ def CategoryView(request, cats):
     
     # Context dictionary set to cats from urls.py file
     return render(
-        request, 'categories.html', {
-            'cats':cats, 
-            'category_posts':category_posts,
-        }
-    )
+        request, 'categories.html', {'cats':cats, 'category_posts':category_posts})

@@ -6,7 +6,8 @@ from django.template.defaultfilters import slugify
 
 # Create your models here.
 class Story(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, default='Story title')
+    organization = models.CharField(max_length=255, default='Orgnization Name')
 
     # Card details
     cardTop = models.ImageField(upload_to="photos/stories", null=True, blank=True) # 480x320/

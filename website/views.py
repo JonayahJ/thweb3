@@ -30,10 +30,6 @@ def contact(request):
 def faq(request):
     return render(request, "faq.html", {})
 
-# Hire Us
-def hire_us(request):
-    return render(request, "hire-us.html", {})
-
 # Maintenance & Hosting
 def maintenance_hosting(request):
     return render(request, "maintenance-hosting.html", {})
@@ -41,6 +37,10 @@ def maintenance_hosting(request):
 # Privacy
 def privacy(request):
     return render(request, "privacy.html", {})
+    
+# Request a quote
+def quote(request):
+    return render(request, "quote.html", {})
 
 # Scheduler
 def scheduler(request):
