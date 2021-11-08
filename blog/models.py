@@ -6,6 +6,21 @@ from datetime import datetime, date
 from django.template.defaultfilters import slugify
 
 # Create your models here.
+class Category(models.Model):
+    name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = 'Categories'
+
+    def __str__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('blog')
+
+# Get categories from the model
+categories = Category.objects.all().values_list('name', 'name')
+
 class Post(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="admin") # If we delete the user, we delete all the posts by the user.
@@ -13,7 +28,7 @@ class Post(models.Model):
     author2 = models.CharField(max_length=100, null=True, blank=True)
     author2HS = models.ImageField(upload_to="photos/blog/profile", null=True, blank=True) # 160x160
     post_date = models.DateField(auto_now_add=True)
-    # categories =
+    category = models.CharField(max_length=100, choices=categories, default='coding')
     # tags =
     
     featured = models.BooleanField(null=True, default=False) # is featured post

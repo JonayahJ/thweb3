@@ -39,6 +39,9 @@ class Story(models.Model):
     # Adding in the slugs for URLs and SEO
     slug = models.SlugField(null=False, unique=True)
 
+    class Meta:
+        verbose_name_plural = 'Stories'
+
 
     def __str__(self):
         return self.title
