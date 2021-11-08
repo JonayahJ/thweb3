@@ -554,6 +554,8 @@
   <script src="{% static 'website/assets/vendor/aos/dist/aos.js' %}"></script>
   <script src="{% static 'website/assets/vendor/typed.js/lib/typed.min.js' %}"></script>
   <script src="{% static 'website/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'website/assets/vendor/hs-sticky-block/dist/hs-sticky-block.min.js' %}"></script>
+  <script src="{% static 'website/assets/vendor/hs-scrollspy/dist/hs-scrollspy.min.js' %}"></script>
 
   <!-- JS Front -->
   <script src="{% static 'website/assets/js/theme.min.js' %}"></script>
@@ -651,5 +653,11 @@
       })
     })()
   </script>
+
+  <!-- More JS -->
+  {% block javascript %}
+
+  {% endblock javascript %}
+
 </body>
 </html>
