@@ -15,7 +15,18 @@ class Contact(models.Model):
         return self.email
 
 # Quote
-budget_options = [('$0-1k','$0-1,000'), ('$1k-2k','$1,000-2,000'), ('$2k-5k','$2,000-5,000'), ('$5k-10k','$5000-10,000'), ('$10k+','$10k+')]
+budget_options = [
+    # Website options
+    ('web-tier1','$1,000-2,000'), 
+    ('web-tier2','$2,000-5,000'), 
+    ('web-tier3','$5000-10,000'), 
+    ('web-tier4','$10k+'),
+
+    # Branding options
+    ('brand-tier1','$200-500'),
+    ('brand-tier2','$500-1,000'),
+    ('brand-tier3','$1,000+'),
+]
 
 class Quote(models.Model):
     first_name = models.CharField(max_length=25)
