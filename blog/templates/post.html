@@ -26,7 +26,9 @@
 
               <div class="flex-grow-1 ms-3">
                 <h5 class="mb-0">
-                  <a class="text-dark" href="./blog-author-profile.html">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                  <!-- <a class="text-dark" href="./author-profile.html"> -->
+                    {{ post.author.first_name }} {{ post.author.last_name }}
+                  <!-- </a> -->                
                 </h5>
                 <span class="d-block small">{{ post.post_date }} | {{ post.category }}</span>
               </div>
@@ -115,7 +117,7 @@
         <!-- End Card --> {% endcomment %}
 
         <!-- Follow us -->
-        <p class="content-space-t-1">
+        <p class="content-space-t-0">
           Follow us on 
             {% comment %} <a class="link" href="#">Medium</a>,  {% endcomment %}
             <a class="link" href="https://twitter.com/ThinkHalcyonLLC" target="_blank">Twitter</a>, 
@@ -134,7 +136,8 @@
         </div>
         <!-- End Tags --> {% endcomment %}
 
-        <div class="row justify-content-sm-between align-items-sm-center mt-5">
+        <!-- Share links -->
+        <!-- <div class="row justify-content-sm-between align-items-sm-center mt-5">
           <div class="col-sm mb-2 mb-sm-0">
             <div class="d-flex align-items-center">
               <span class="text-cap mb-0 me-2">Share:</span>
@@ -152,7 +155,7 @@
                 <i class="bi-telegram"></i>
               </a>
             </div>
-          </div>
+          </div> -->
           <!-- End Col -->
 
           <!-- Report and Bookmark -->
@@ -163,16 +166,20 @@
             <a class="btn btn-soft-secondary btn-sm btn-icon rounded-circle" href="#" data-toggle="tooltip" data-placement="top" title="Report story">
               <i class="bi-flag"></i>
             </a>
-          </div> -->
-          <!-- End Col -->
-        </div>
+          </div> 
+
+        </div> -->
         <!-- End Row -->
       </div>
     </div>
     <!-- End Article Description -->
 
     <!-- User Profile -->
-    <div class="container content-space-t-1 content-space-b-2">
+    <div class="
+      container
+      {% comment %} content-space-t-1  {% endcomment %}
+      content-space-b-3
+    ">
       <div class="row justify-content-lg-center">
         <div class="col-lg-8">
           <div class="mb-5">
@@ -189,7 +196,9 @@
               <!-- Media -->
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h3 class="mb-0">
-                  <a class="text-dark" href="./author-profile.html">{{ post.author.first_name }} {{ post.author.last_name }}</a>
+                  <!-- <a class="text-dark" href="./author-profile.html"> -->
+                    {{ post.author.first_name }} {{ post.author.last_name }}
+                  <!-- </a> -->
                 </h3>
 
                 <!-- Follow Button -->
@@ -200,7 +209,7 @@
               </div>
               <!-- End Media -->
 
-              <p>Christina started his recruitment career on the agency side. Since then, she’s built a career helping customers get the most out of HR technology. She’s currently a Customer Success Specialist at Space and spends her time speaking to in-house recruiters all over the world - helping them solve their recruitment challenges, and get the most out of our talent acquisition software.</p>
+              <p>Jo is a full-stack developer versed in the MERN stack, as well as Django and python. It has been her dream to own a business where she could be her own boss and foster a creative, collaborative environment for her team members.  She loves dancing, reading, dogs, video games, and all things geek.</p>
             </div>
           </div>
           <!-- End Media -->

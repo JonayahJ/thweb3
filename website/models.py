@@ -23,4 +23,4 @@ class Testimonial(models.Model):
     quote = models.TextField(max_length=300)
 
     def __str__(self):
-        return self.name
+        return self.name    

@@ -2,9 +2,10 @@ from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from website.models import Member
 # from ckeditor.fields import RichTextField
 
-# Create your models here.
+# Categories
 class Category(models.Model):
     name = models.CharField(max_length=100)
 
@@ -20,6 +21,17 @@ class Category(models.Model):
 # Get categories from the model
 categories = Category.objects.all().values_list('name', 'name')
 
+# User and Author Profile Relational Model
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    # user_photo = models.ForeignKey(Member, to='headshot', on_delete=models.CASCADE, null=True, blank=True)
+    headshot = models.ImageField(upload_to='photos/headshots', null=True, blank=True)
+    bio = models.TextField()
+
+    def __str__(self):
+        return str(self.user)
+
+# Posts
 class Post(models.Model):
     title = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default="admin") # If we delete the user, we delete all the posts by the user.

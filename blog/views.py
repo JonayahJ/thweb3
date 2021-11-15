@@ -23,3 +23,8 @@ def CategoryView(request, cats):
     # Context dictionary set to cats from urls.py file
     return render(
         request, 'categories.html', {'cats':cats, 'category_posts':category_posts})
+
+# Author profile home view (profile page)
+class AuthorProfileView(ListView):
+    model = Post
+    template_name = 'author-profile.html'

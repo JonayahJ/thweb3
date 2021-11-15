@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Author Profile{% endblock %}
-{% block description %}Read the bio for and blog posts by [profile.name].{% endblock %}
+{% block title %} {{ profile.user.first_name }} {{ profile.user.last_name }} | Author Profile{% endblock %}
+{% block description %}Read the bio for and blog posts by {{ profile.user.first_name }} {{ profile.user.last_name }}.{% endblock %}
 
 {% block content %}
 
@@ -16,44 +16,53 @@
         <div class="d-sm-flex">
           <div class="flex-shrink-0 mb-3 mb-sm-0">
             <div class="avatar avatar-xxl avatar-circle">
-              <img class="avatar-img" src="./assets/img/160x160/img9.jpg" alt="Image Description">
-              <img class="bg-white position-absolute bottom-0 end-0 rounded-circle p-1" src="./assets/svg/illustrations/top-vendor.svg" alt="Icon" width="32" height="32" title="Top Writer">
+              <img class="avatar-img" src="./assets/img/160x160/img9.jpg" alt="Image Description"> <!-- profile headshot -->
+              <img class="bg-white position-absolute bottom-0 end-0 rounded-circle p-1" src="{% static 'website/assets/svg/illustrations/top-vendor.svg' %}" alt="Icon" width="32" height="32" title="Top Writer">
             </div>
           </div>
 
           <div class="flex-grow-1 ms-sm-4">
             <!-- Media -->
             <div class="d-flex justify-content-between align-items-center mb-3">
-              <h1 class="h2 mb-0">Christina Kray</h1>
+              <h1 class="h2 mb-0">{{ profile.user.first_name }} {{ profile.user.last_name }}</h1> <!-- profil name -->
               
-              <button type="button" class="btn btn-outline-primary btn-sm">
+              {% comment %} <button type="button" class="btn btn-outline-primary btn-sm">
                 <i class="bi-person-plus-fill me-1"></i> Follow
-              </button>
+              </button> {% endcomment %}
             </div>
             <!-- End Media -->
 
             <div class="row mb-3">
               <div class="col-auto">
-                <span class="h6">906</span>
+
+                {% if posts|length >0 %}
+                    <!-- Number of posts -->
+                    <span class="h6">{{ posts|length }} </span>
+                {% else %}
+                    <span class="h6">0 </span>
+                {% endif %}
                 <span class="ms-1">Posts</span>
+                
               </div>
               <!-- End Col -->
 
-              <div class="col-auto">
+              <!-- Followers -->
+              {% comment %} <div class="col-auto">
                 <span class="h6">19.5k</span>
                 <span class="ms-1">Followers</span>
-              </div>
+              </div> {% endcomment %}
               <!-- End Col -->
 
-              <div class="col-auto">
+              <!-- Following -->
+              {% comment %} <div class="col-auto">
                 <span class="h6">109</span>
                 <span class="ms-1">Following</span>
-              </div>
+              </div> {% endcomment %}
               <!-- End Col -->
             </div>
             <!-- End Row -->
 
-            <p>Christina started his recruitment career on the agency side. Since then, she’s built a career helping customers get the most out of HR technology. She’s currently a Customer Success Specialist at Space and spends her time speaking to in-house recruiters all over the world - helping them solve their recruitment challenges, and get the most out of our talent acquisition software.</p>
+            <p>...</p> <!-- Bio -->
           </div>
         </div>
         <!-- End Media -->
@@ -71,7 +80,7 @@
             
             <!-- For Loop -->
             {% for post in object_list %}
-                {% if ... %} <!-- profile.name == post.author -->
+                {% if profile.user == post.author %} <!-- profile.name == post.author -->
                     <!-- Card -->
                     <div class="card mb-5 mb-md-10">
                         <div class="shape-container">
