@@ -9,7 +9,7 @@
 <!-- ========== MAIN CONTENT ========== -->
   <main id="content" role="main">
     <!-- Hero -->
-    <div class="position-relative bg-img-start" style="background-image: url({% static 'website/assets/img/1920x1080/img33.png' %});" alt="business woman on phone and desktop">
+    <div class="position-relative bg-img-start" style="background-image: url({% static 'website/assets/img/1920x1080/img32.png' %});" alt="business woman on phone and desktop">
       
       <div class="container content-space-t-2 content-space-t-md-3 content-space-3 content-space-b-lg-5">
         <div class="w-lg-50 content-space-b-lg-5">
@@ -94,25 +94,27 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 mb-5">
 
         <!-- ==================================================== For loop here ============================================================= -->
-        <div class="col mb-5">
-          <!-- Card -->
-          <div class="card h-100">
-            <img class="card-img-top" src="{% static 'website/assets/img/480x320/img13.jpg' %}" alt="Image Description">
-            
-            <div class="card-body">
-              <div class="mb-3">
-                <img class="avatar avatar-lg avatar-4x3" src="{% static 'website/assets/svg/brands/amazon.svg' %}" alt="Logo">
+        {% for story in object_list %}
+          <div class="col mb-5">
+            <!-- Card -->
+            <div class="card h-100">
+              <img class="card-img-top" src="{{ story.cardTop.url }}" alt="{{ story.altDesc1 }}">
+              
+              <div class="card-body">
+                <div class="mb-3">
+                  <img class="avatar avatar-lg avatar-4x3" src="{{ story.logo.url }}" alt="Company Logo">
+                </div>
+                <p class="card-text">{{ story.excerpt }}</p>
               </div>
-              <p class="card-text">Amazon launched their enterprise platform and built a powerful user experience.</p>
+              
+              <div class="card-footer pt-0">
+                <a class="card-link" href="{{ story.get_absolute_url }}">Read story <i class="bi-chevron-right small ms-1"></i></a>
+              </div>
             </div>
-            
-            <div class="card-footer pt-0">
-              <a class="card-link" href="./page-customer-story.html">Read story <i class="bi-chevron-right small ms-1"></i></a>
-            </div>
+            <!-- End Card -->
           </div>
-          <!-- End Card -->
-        </div>
-        <!-- End Col -->
+          <!-- End Col -->
+        {% endfor %}
         <!-- ==================================================== Endfor loop here ============================================================= -->
 
       </div>

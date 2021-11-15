@@ -89,9 +89,9 @@
 
         <div class="row gx-3 mb-5"> <!-- start row -->
             
-            {% for member in object_list %}
+            {% for member in object_list|slice:":2" %}
 
-                <div class="col-sm-6 col-lg-4 mb-4"> <!-- start col -->
+                <div class="col-sm-6 col-lg-6 mb-6"> <!-- start col -->
 
                     <!-- Card -->
                     <div class="card card-transition h-100">

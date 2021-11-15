@@ -1,9 +1,8 @@
 from django.db import models
 from django.urls import reverse
 from django.contrib.auth.models import User
-from django.db.models.enums import Choices
-from datetime import datetime, date
 from django.template.defaultfilters import slugify
+# from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Category(models.Model):
@@ -39,15 +38,18 @@ class Post(models.Model):
     excerpt = models.CharField(max_length=200, default="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.")
 
     body1 = models.TextField()
+    # body1 = RichTextField(blank=True, null=True)
     bodyImage1 = models.ImageField(upload_to="photos/blog", null=True, blank=True) # 1920x800
     altDesc2 = models.CharField(max_length=100, null=True, blank=True, default="Lorem ipsum dolor sit amet")
     body2 = models.TextField()
+    # body2 = RichTextField(blank=True, null=True)
     
     quote = models.TextField(null=True, blank=True)
     source = models.CharField(max_length=100, null=True, blank=True)
     position = models.CharField(max_length=255, null=True, blank=True)
     
     body3 = models.TextField()
+    # body3 = RichTextField(blank=True, null=True)
     bodyImage2 = models.ImageField(upload_to="photos/blog", null=True, blank=True) # 1920x800
     altDesc3 = models.CharField(max_length=100, null=True, blank=True, default="Lorem ipsum dolor sit amet")
     body4 = models.TextField()

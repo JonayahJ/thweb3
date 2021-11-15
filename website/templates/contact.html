@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}Contact Us{% endblock %}
-{% block description %}Contact the Think Halcyon team by filling out this form.{% endblock %}
+{% block description %}Get in touch with the Think Halcyon team by filling out our contact form.{% endblock %}
 
 {% block content %}
 
@@ -23,18 +23,21 @@
               <div class="card-body">
                 <div class="svg-icon text-primary mb-3">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#035A4B"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M10.591 13.209V14.868H11.851C14.392 14.868 16.387 12.915 16.387 10.395C16.387 7.875 14.392 5.922 11.851 5.922C9.31 5.922 7.336 7.875 7.336 10.395H9.121C9.121 8.799 10.234 7.581 11.851 7.581C13.447 7.581 14.602 8.799 14.602 10.395C14.602 11.991 13.447 13.209 11.851 13.209H10.591ZM12 16C11.4477 16 11 16.4477 11 17C11 17.5523 11.4477 18 12 18C12.5523 18 13 17.5523 13 17C13 16.4477 12.5523 16 12 16Z" fill="#035A4B"/>
+                  <path opacity="0.3" d="M22.0318 8.59998C22.0318 10.4 21.4318 12.2 20.0318 13.5C18.4318 15.1 16.3318 15.7 14.2318 15.4C13.3318 15.3 12.3318 15.6 11.7318 16.3L6.93177 21.1C5.73177 22.3 3.83179 22.2 2.73179 21C1.63179 19.8 1.83177 18 2.93177 16.9L7.53178 12.3C8.23178 11.6 8.53177 10.7 8.43177 9.80005C8.13177 7.80005 8.73176 5.6 10.3318 4C11.7318 2.6 13.5318 2 15.2318 2C16.1318 2 16.6318 3.20005 15.9318 3.80005L13.0318 6.70007C12.5318 7.20007 12.4318 7.9 12.7318 8.5C13.3318 9.7 14.2318 10.6001 15.4318 11.2001C16.0318 11.5001 16.7318 11.3 17.2318 10.9L20.1318 8C20.8318 7.2 22.0318 7.59998 22.0318 8.59998Z" fill="#035A4B"/>
+                  <path d="M4.23179 19.7C3.83179 19.3 3.83179 18.7 4.23179 18.3L9.73179 12.8C10.1318 12.4 10.7318 12.4 11.1318 12.8C11.5318 13.2 11.5318 13.8 11.1318 14.2L5.63179 19.7C5.23179 20.1 4.53179 20.1 4.23179 19.7Z" fill="#035A4B"/>
                   </svg>
 
                 </div>
 
-                <h4 class="card-title">Knowledgebase</h4>
-                <p class="card-text text-body">We're here to help with any questions or code.</p>
+                <h4 class="card-title">Maintenance Tickets</h4>
+                <p class="card-text text-body">We're here to help with any bugs that you may have.</p>
               </div>
 
               <div class="card-footer pt-0">
-                <span class="card-link">Contact support <i class="bi-chevron-right small ms-1"></i></span>
+                <span class="card-link">
+                  Submit a ticket (coming soon) 
+                  {% comment %} <i class="bi-chevron-right small ms-1"></i> {% endcomment %}
+                </span>
               </div>
             </a>
             <!-- End Card -->
@@ -43,7 +46,7 @@
 
           <div class="col-md-4 mb-3 mb-md-0">
             <!-- Card -->
-            <a class="card card-transition text-center h-100" href="#">
+            <a class="card card-transition text-center h-100" href="{% url 'faq' %}">
               <div class="card-body">
                 <div class="svg-icon text-primary mb-3">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +70,7 @@
 
           <div class="col-md-4">
             <!-- Card -->
-            <a class="card card-transition text-center h-100" href="#">
+            <a class="card card-transition text-center h-100" href="#contact-form">
               <div class="card-body">
                 <div class="svg-icon text-primary mb-3">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,12 +80,12 @@
 
                 </div>
 
-                <h4 class="card-title">Developer APIs</h4>
-                <p class="card-text text-body">Check out our development quickstart guide.</p>
+                <h4 class="card-title">Plugins and APIs</h4>
+                <p class="card-text text-body">Ask us about the types of WordPress plugins or APIs for custom websites.</p>
               </div>
 
               <div class="card-footer pt-0">
-                <span class="card-link">Contact sales <i class="bi-chevron-right small ms-1"></i></span>
+                <span class="card-link">Message us below <i class="bi-chevron-down small ms-1"></i></span>
               </div>
             </a>
             <!-- End Card -->
@@ -103,15 +106,15 @@
     <!-- End Hero -->
 
     <!-- Contact Form -->
-    <div class="container content-space-2 content-space-lg-3">
+    <div class="container content-space-2 content-space-lg-2">
       <div class="mx-auto" style="max-width: 35rem;">
         <!-- Card -->
         <div class="card">
           <div class="card-body">
             <!-- Heading -->
-            <div class="text-center mb-5 mb-md-9">
-              <h2>Tell us about yourself</h2>
-              <p>Whether you have questions or you would just like to say hello, contact us.</p>
+            <div class="text-center mb-5 mb-md-9" id="contact-form">
+              <h2>Get In Touch</h2>
+              <p>Whether you have questions or you would just like to say hello, contact us with this form below.</p>
             </div>
             <!-- End Heading -->
 
@@ -167,7 +170,7 @@
               <!-- Form -->
               <div class="mb-3">
                 <label class="form-label" for="hireUsFormDetails">Message</label>
-                <textarea class="form-control form-control-lg" name="message" id="hireUsFormDetails" placeholder="Tell us about your ..." aria-label="Tell us about your ..." rows="4"></textarea>
+                <textarea class="form-control form-control-lg" name="message" id="hireUsFormDetails" placeholder="Tell us about your website or branding needs" aria-label="Tell us about your website or branding needs" rows="4"></textarea>
               </div>
               <!-- End Form -->
 
@@ -187,32 +190,51 @@
     </div>
     <!-- End Contact Form -->
 
-    <!-- Leaflet -->
+    <!-- Leaflet
     <div class="container-fluid mb-3">
       <div class="overflow-hidden">
         <div id="map" class="leaflet"
              data-hs-leaflet-options='{
              "map": {
                "scrollWheelZoom": false,
-               "coords": [37.4040344, -122.0289704]
+               "coords": [40.6893675, -73.9084325]
              },
              "marker": [
                {
-                 "coords": [37.4040344, -122.0289704],
+                 "coords": [40.6893675, -73.9084325],
                  "icon": {
                    "iconUrl": "{% static 'website/assets/svg/components/map-pin.svg' %}",
                    "iconSize": [50, 45]
                  },
                  "popup": {
-                   "text": "153 Williamson Plaza, Maggieberg"
+                   "text": "620 Wilson Avenue, Brooklyn, NY"
                  }
                }
              ]
-            }'></div>
+            }'>
+        </div>
       </div>
     </div>
-    <!-- End Leaflet -->
+    End Leaflet -->
+
   </main>
   <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}
+
+{% block javascript %}
+
+  <!-- JS Plugins Init. -->
+  <script>
+    (function() {
+    // INITIALIZATION OF LEAFLET
+    // =======================================================
+    const leaflet = HSCore.components.HSLeaflet.init(document.getElementById('map'))
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+      id: 'mapbox/light-v9'
+    }).addTo(leaflet)
+  });
+</script>
 
 {% endblock %}
