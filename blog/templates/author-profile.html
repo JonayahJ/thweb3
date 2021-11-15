@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Author Profile{% endblock %}
+{% block description %}Read the bio for and blog posts by [profile.name].{% endblock %}
+
+{% block content %}
+
+{% comment %} Content goes here {% endcomment %}
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="content" role="main">
+    <!-- User Profile -->
+    <div class="container content-space-t-3 content-space-t-lg-4 content-space-b-1">
+      <div class="w-md-75 w-lg-65 mx-md-auto">
+        <!-- Media -->
+        <div class="d-sm-flex">
+          <div class="flex-shrink-0 mb-3 mb-sm-0">
+            <div class="avatar avatar-xxl avatar-circle">
+              <img class="avatar-img" src="./assets/img/160x160/img9.jpg" alt="Image Description">
+              <img class="bg-white position-absolute bottom-0 end-0 rounded-circle p-1" src="./assets/svg/illustrations/top-vendor.svg" alt="Icon" width="32" height="32" title="Top Writer">
+            </div>
+          </div>
+
+          <div class="flex-grow-1 ms-sm-4">
+            <!-- Media -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h1 class="h2 mb-0">Christina Kray</h1>
+              
+              <button type="button" class="btn btn-outline-primary btn-sm">
+                <i class="bi-person-plus-fill me-1"></i> Follow
+              </button>
+            </div>
+            <!-- End Media -->
+
+            <div class="row mb-3">
+              <div class="col-auto">
+                <span class="h6">906</span>
+                <span class="ms-1">Posts</span>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-auto">
+                <span class="h6">19.5k</span>
+                <span class="ms-1">Followers</span>
+              </div>
+              <!-- End Col -->
+
+              <div class="col-auto">
+                <span class="h6">109</span>
+                <span class="ms-1">Following</span>
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+
+            <p>Christina started his recruitment career on the agency side. Since then, she’s built a career helping customers get the most out of HR technology. She’s currently a Customer Success Specialist at Space and spends her time speaking to in-house recruiters all over the world - helping them solve their recruitment challenges, and get the most out of our talent acquisition software.</p>
+          </div>
+        </div>
+        <!-- End Media -->
+      </div>
+    </div>
+    <!-- End User Profile -->
+
+    <div class="container">
+      <div class="border-top w-md-75 w-lg-65 mx-md-auto"></div>
+    </div>
+
+    <!-- Card Grid -->
+    <div class="container content-space-1">
+        <div class="w-md-75 w-lg-65 mx-md-auto">
+            
+            <!-- For Loop -->
+            {% for post in object_list %}
+                {% if ... %} <!-- profile.name == post.author -->
+                    <!-- Card -->
+                    <div class="card mb-5 mb-md-10">
+                        <div class="shape-container">
+                            {% if post.featured %}
+                                <img class="card-img-top" src="{{ post.featuredImage.url }}" alt="{{ post.featDesc }}">
+                            {% else %}
+                                <img class="card-img-top" src="{{ post.cardTop.url }}" alt="{{ post.altDesc1 }}">
+                            {% endif %}
+                            <!-- Shape -->
+                            <div class="shape shape-bottom zi-1" style="margin-bottom: -.25rem">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1920 100.1">
+                                <path fill="#fff" d="M0,0c0,0,934.4,93.4,1920,0v100.1H0L0,0z"></path>
+                                </svg>
+                            </div>
+                            <!-- End Shape -->
+                        </div>
+
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <h3 class="card-title">
+                                <a class="text-dark" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                            </h3>
+
+                            <p class="card-text">{{ post.excerpt }}</p>
+                        </div>
+                        <!-- End Card Body -->
+
+                        <!-- Card Footer -->
+                        <div class="card-footer">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 avatar-group avatar-group-xs">
+                                    {% if post.author|length <= 1 %} <!-- authors -->
+                                    <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                                        <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                                    </a>
+                                    {% else %}  
+                                    <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author.first_name }} {{ post.author.last_name}}">
+                                        <img class="avatar-img" src="{{ post.authorHS.url }}" alt="{{ post.author.first_name }} {{ post.author.last_name}}'s headshot">
+                                    </a>
+                                    <a class="avatar avatar-xs avatar-circle" href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="{{ post.author2 }}">
+                                        <img class="avatar-img" src="{{ post.author2HS.url }}" alt="{{ post.author2 }}'s headshot">
+                                    </a>
+                                    {% endif %}
+                                </div>
+
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-end">
+                                    <p class="card-text">{{ post.post_date }}</p> <!-- date -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Card Footer -->
+                    </div>
+                    <!-- End Card -->
+                {% endif %}
+            {% for %}
+        
+        </div>
+    </div>
+    <!-- End Card Grid -->
+
+    <!-- Pagination -->
+    {% comment %} <div class="container content-space-b-2 content-space-b-lg-3">
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-left small"></i>
+              </span>
+            </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">
+                <i class="bi-chevron-double-right small"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div> {% endcomment %}
+    <!-- End Pagination -->
+
+  </main>
+  <!-- ========== END MAIN CONTENT ========== -->
+
+{% endblock %}
